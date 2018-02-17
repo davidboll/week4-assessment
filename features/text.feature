@@ -8,4 +8,10 @@ Feature: Week 4 assessment
 
   Scenario: User visits the site and is able to see his/her name on the page
     When the user visits the site
-    Then he should see "BollKalle" is a student at Craft Academy"
+    Then he should see "BollKalle" is a student at Craft Academy
+
+  # Background:
+  #   Given is a user in the database
+  Scenario: Sandra visits a url with her name and a user with that name is created
+    When the user visits url with her name
+    Then a user with the name "Sandra" is created
