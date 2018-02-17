@@ -5,7 +5,10 @@ class WeekFourAssessmentApp
   end
 
   get '/name/:name' do
-    "#{params[:name]} is a student at Craft Academy"
+    user = User.new
+    user.name = params[:name]
+    user.save
+    redirect '/'
   end
 
 end

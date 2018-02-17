@@ -12,9 +12,9 @@ Then(/^he should see "([^"]*)" is a student at Craft Academy$/) do |name|
 end
 
 When(/^the user visits url with her name$/) do
-  visit '/name/'
+  visit '/name/:name'
 end
 
 Then(/^a user with the name "([^"]*)" is created$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_content arg1
 end
